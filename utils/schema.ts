@@ -4,6 +4,10 @@ export const Blogs = pgTable("blogs",{
   uuid:varchar('uid').primaryKey(),
   content:varchar('content')
 });
+export const Videos = pgTable("videos",{
+  uuid:varchar('uid').primaryKey(),
+  content:varchar('content')
+});
 
 export const Events = pgTable("events",{
   uuid:varchar('uid').primaryKey(),

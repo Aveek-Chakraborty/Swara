@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Link from 'next/link'
-import { CalendarCheckIcon, HomeIcon, MailIcon, PartyPopperIcon, PenIcon } from 'lucide-react'
+import { CalendarCheckIcon, HomeIcon, MailIcon, PartyPopperIcon, PenIcon, VideoIcon } from 'lucide-react'
 
 const SideNavigation = () => {
   return (
@@ -23,6 +23,10 @@ const SideNavigation = () => {
             <Link href='/admin/events' className='block hover:shadow-slate-600 dark:hover:shadow-slate-400 hover:shadow-md dark:bg-zinc-700 bg-zinc-300 p-3 rounded-md  text-xs md:text-lg'>
               <div className='flex items-center gap-3'>
                 <CalendarCheckIcon/> Events</div>
+            </Link>
+            <Link href='/admin/videos' className='block hover:shadow-slate-600 dark:hover:shadow-slate-400 hover:shadow-md dark:bg-zinc-700 bg-zinc-300 p-3 rounded-md  text-xs md:text-lg'>
+              <div className='flex items-center gap-3'>
+                <VideoIcon/> Videos</div>
             </Link>
             <Link href='/admin/messages' className='block hover:shadow-slate-600 dark:hover:shadow-slate-400 hover:shadow-md dark:bg-zinc-700 bg-zinc-300 p-3 rounded-md  text-xs md:text-lg'>
               <div className='flex items-center gap-3'>
