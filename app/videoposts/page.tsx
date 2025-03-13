@@ -102,7 +102,7 @@ const VideoPage = () => {
                         {videos.map((video) => (
                             <div key={video.uuid} className="bg-white  shadow-md rounded-lg md:items-center flex flex-col md:flex-row">
                                 {/* Left Side - Video */}
-                                <div className="md:w-3/4">
+                                <div className="md:w-3/5">
                                     <iframe
                                         className="w-full min-h-[250px] rounded-tr-md rounded-tl-md md:min-h-[600px] md:rounded-tr-none md:rounded-tl-md md:rounded-bl-md" // Increased height
                                         src={`https://www.youtube.com/embed/${video.videoId}`}
@@ -113,7 +113,7 @@ const VideoPage = () => {
                                     ></iframe>
                                 </div>
 
-                                <div className="md:w-1/3 w-full p-6 md:p-10 flex flex-col justify-center min-h-[300px] text-left">
+                                <div className="md:w-2/5 w-full p-6 md:p-10 flex flex-col justify-center min-h-[300px] text-left">
                                     {/* Title - Larger & Bold */}
                                     <div className="text-xl md:text-2xl font-bold overflow-hidden text-ellipsis">
                                         {getFormattedText(video.title)}
