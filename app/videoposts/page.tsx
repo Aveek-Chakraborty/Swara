@@ -97,7 +97,7 @@ const VideoPage = () => {
                         <div className='loader border-t-2 border-b-2 border-gray-500 w-12 h-12 rounded-full animate-spin'></div>
                     </div>
                 ) : videos.length > 0 ? (
-                    <div className="flex flex-col gap-6 mt-10">
+                    <div className="flex flex-col  gap-10 md:gap-14 mt-10">
 
                         {videos.map((video) => (
                             <div key={video.uuid} className="bg-white  shadow-md rounded-lg md:items-center flex flex-col md:flex-row">
