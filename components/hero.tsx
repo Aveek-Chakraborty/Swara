@@ -147,6 +147,7 @@ const HeroSection = () => {
                 We specialize in supporting students with ADHD and other learning differences.
               </p>
               <div className="flex flex-wrap gap-4">
+                <Link href={'/contact'}>
                 <motion.button
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-lg transition-all"
                   whileHover={{ scale: 1.05 }}
@@ -154,6 +155,7 @@ const HeroSection = () => {
                 >
                   Schedule a Visit
                 </motion.button>
+                </Link>
                 <motion.button
                   className="bg-white hover:bg-gray-100 text-blue-600 border border-blue-600 px-6 py-3 rounded-lg font-medium shadow-sm transition-all"
                   whileHover={{ scale: 1.05 }}
