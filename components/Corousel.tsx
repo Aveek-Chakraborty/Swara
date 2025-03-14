@@ -7,22 +7,22 @@ const ImageCarousel = () => {
   // Array of image data with src, alt text and caption
   const images = [
     {
-      src: "/api/placeholder/600/500",
+      src: "/dg.avif",
       alt: "Diverse students learning together",
       caption: "Collaborative learning environment"
     },
     {
-      src: "/api/placeholder/600/500",
+      src: "/cd.avif",
       alt: "Students in science lab",
       caption: "Hands-on science exploration"
     },
     {
-      src: "/api/placeholder/600/500",
-      alt: "Art class in session",
-      caption: "Creative expression through art"
+      src: "/ag.avif",
+      alt: "Class in session",
+      caption: "Creative expression through studies"
     },
     {
-      src: "/api/placeholder/600/500",
+      src: "/bg.avif",
       alt: "Students during physical education",
       caption: "Promoting active lifestyles"
     }
