@@ -130,8 +130,8 @@ const HeroSection = () => {
     <>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
-          <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-24">
+          <div className="flex mt-11 flex-row flex-wrap items-center justify-between">
             <motion.div
               className="md:w-1/2 mb-8 md:mb-0"
               initial={{ opacity: 0, y: 20 }}
@@ -164,7 +164,7 @@ const HeroSection = () => {
               </div>
             </motion.div>
             <motion.div
-              className="md:w-1/2"
+              className="w-full md:w-1/2"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -189,7 +189,7 @@ const HeroSection = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
