@@ -5,7 +5,6 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("");
-  const [animationComplete, setAnimationComplete] = useState(true);
 
   // Handle scroll effect for navbar
   useEffect(() => {
@@ -26,45 +25,9 @@ function Navbar() {
     };
   }, []);
 
-  // Improved toggle menu logic with animation handling
   const toggleMenu = () => {
-    if (animationComplete) {
-      setAnimationComplete(false);
-      setIsOpen(!isOpen);
-      
-      // Reset animation complete state after animation finishes
-      setTimeout(() => {
-        setAnimationComplete(true);
-      }, 300); // Match this with your transition duration
-    }
+    setIsOpen(!isOpen);
   };
-
-  // Close menu when pressing escape key
-  useEffect(() => {
-    const handleEscKey = (event:any) => {
-      if (event.key === "Escape" && isOpen) {
-        toggleMenu();
-      }
-    };
-
-    document.addEventListener("keydown", handleEscKey);
-    return () => {
-      document.removeEventListener("keydown", handleEscKey);
-    };
-  }, [isOpen]);
-
-  // Lock body scroll when menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -76,7 +39,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className={`fixed w-screen z-50 ${scrolled && !isOpen ? 'border-b border-gray-200 bg-white/80 shadow-sm' : ''}`}>
+    <nav className={`fixed w-screen z-50 ${scrolled ? 'border-b border-gray-200 bg-white/80 shadow-sm' : 'border-b-op'}`}>
       <div className="flex justify-between items-center h-16 p-6 lg:p-10 backdrop-blur gap-4 lg:gap-14">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -104,14 +67,11 @@ function Navbar() {
           {/* <ThemeSwitcher /> */}
         </div>
         
-        {/* Hamburger Icon */}
+        {/* Hamburger Icon - Keeping original logic but improving styling */}
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
             className="p-1.5 rounded-md bg-gray-50 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
-            disabled={!animationComplete}
-            aria-expanded={isOpen}
-            aria-label="Main menu"
           >
             <svg
               className="w-6 h-6 text-gray-700"
@@ -131,34 +91,20 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Overlay - Improved for better slide animation effect */}
-      <div 
-        className={`fixed inset-0 bg-black/30 backdrop-blur-sm transition-opacity duration-300 ease-in-out ${
-          isOpen ? 'opacity-100 z-40' : 'opacity-0 -z-10'
-        }`}
-        onClick={toggleMenu}
-        aria-hidden="true"
-      ></div>
-
-      {/* Mobile Menu - Improved sliding animation */}
+      {/* Mobile Menu - Keeping original sliding panel logic */}
       <div
-        className={`fixed inset-y-0 right-0 w-64 bg-white shadow-lg transform transition-all duration-300 ease-in-out md:hidden z-50 ${
+        className={`fixed inset-y-0 right-0 w-64 bg-white/95 backdrop-blur shadow-lg transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-        style={{
-          boxShadow: isOpen ? "-4px 0 15px rgba(0, 0, 0, 0.1)" : "none"
-        }}
+        } transition-transform duration-300 ease-in-out md:hidden`}
       >
         {/* Close Button */}
-        <div className="flex items-center justify-between p-4 border-b border-gray-100">
-          <span className="font-medium text-gray-800">Menu</span>
+        <div className="flex justify-end p-4 border-b border-gray-100">
           <button
             onClick={toggleMenu}
             className="p-1.5 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40 text-gray-700"
-            aria-label="Close main menu"
           >
             <svg
-              className="w-5 h-5"
+              className="w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -174,21 +120,17 @@ function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Links - With staggered entrance animation */}
-        <div className="px-2 pt-4 pb-3 space-y-1 max-h-screen">
-          {navLinks.map((link, index) => (
+        {/* Mobile Links - Improved styling */}
+        <div className="px-2 pt-4 pb-3 space-y-1">
+          {navLinks.map((link) => (
             <a 
               key={link.path}
               href={link.path} 
-              className={`block px-3 py-2.5 rounded-md text-base font-medium transition-all duration-300 ease-in-out ${
+              className={`block px-3 py-2.5 rounded-md text-base font-medium transition-colors duration-200 ${
                 activeLink === link.path 
                   ? 'bg-blue-50 text-blue-700' 
                   : 'text-gray-700 hover:bg-gray-50'
-              } ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}`}
-              style={{ 
-                transitionDelay: isOpen ? `${index * 50}ms` : '0ms'
-              }}
-              onClick={toggleMenu}
+              }`}
             >
               {link.name}
               {activeLink === link.path && (
@@ -200,6 +142,7 @@ function Navbar() {
               )}
             </a>
           ))}
+          {/* <ThemeSwitcher /> */}
         </div>
       </div>
     </nav>
