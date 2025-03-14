@@ -76,7 +76,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className={`fixed w-screen z-50 ${scrolled ? 'border-b border-gray-200 bg-white/80 shadow-sm' : 'border-b-op'}`}>
+    <nav className={`fixed w-screen z-50 ${scrolled && !isOpen ? 'border-b border-gray-200 bg-white/80 shadow-sm' : ''}`}>
       <div className="flex justify-between items-center h-16 p-6 lg:p-10 backdrop-blur gap-4 lg:gap-14">
         {/* Logo */}
         <div className="flex-shrink-0">
