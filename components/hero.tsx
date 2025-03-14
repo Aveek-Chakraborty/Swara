@@ -368,7 +368,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.5 }}
               >
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="w-full flex-shrink-0">
+                  <div key={index} className="w-full  flex-shrink-0">
                     <div className="max-w-3xl mx-auto m-4 bg-white rounded-xl shadow-lg p-8 md:p-10">
                       <div className="flex items-center mb-6">
                         <div className="flex-shrink-0">
