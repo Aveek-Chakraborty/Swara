@@ -1,7 +1,7 @@
-// ./src/components/Navbar.jsx
+
 'use client'
 import React, { useState } from "react";
-// import { ThemeSwitcher } from "../theme-switcher";
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed w-screen border-b-op z-10">
+    <nav className="fixed w-screen border-b-op z-50">
         <div className="flex justify-between items-center h-16 p-10 backdrop-blur gap-[14rem]">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -24,6 +24,7 @@ function Navbar() {
             <a href="/" className="hover:text-blue-300">Home</a>
             <a href="/blogposts" className="hover:text-blue-300">Blogs</a>
             <a href="/eventposts" className="hover:text-blue-300">Events</a>
+            <a href="/videoposts" className="hover:text-blue-300">Videos</a>
             <a href="#" className="hover:text-blue-300">Services</a>
             <a href="/contact" className="hover:text-blue-300">Contact us</a>
             {/* <ThemeSwitcher /> */}
@@ -91,6 +92,9 @@ function Navbar() {
           </a>
           <a href="/eventposts" className="block px-3 py-2 rounded-md text-base font-medium text-black hover:bg-zinc-50 hover:bg-opacity-40">
             Events
+          </a>
+          <a href="/videoposts" className="block px-3 py-2 rounded-md text-base font-medium text-black hover:bg-zinc-50 hover:bg-opacity-40">
+            Videos
           </a>
           <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-black hover:bg-zinc-50 hover:bg-opacity-40">
             Services
