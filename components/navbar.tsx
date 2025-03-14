@@ -175,7 +175,7 @@ function Navbar() {
         </div>
 
         {/* Mobile Links - With staggered entrance animation */}
-        <div className="px-2 pt-4 pb-3 space-y-1 overflow-y-auto max-h-screen">
+        <div className="px-2 pt-4 pb-3 space-y-1 max-h-screen">
           {navLinks.map((link, index) => (
             <a 
               key={link.path}
