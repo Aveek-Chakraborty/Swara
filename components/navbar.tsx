@@ -43,7 +43,7 @@ function Navbar() {
       <div className="flex justify-between items-center h-16 p-6 lg:p-10 backdrop-blur gap-4 lg:gap-14">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <a href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <a href="/" className="text-2xl font-bold bg-gradient-to-r from-green-500 to-purple-600 bg-clip-text text-transparent">
             Logo
           </a>
         </div>
@@ -54,13 +54,13 @@ function Navbar() {
             <a 
               key={link.path}
               href={link.path} 
-              className={`relative py-1 text-sm font-medium transition-colors duration-200 hover:text-blue-500 ${
-                activeLink === link.path ? 'text-blue-500' : 'text-gray-700'
+              className={`relative py-1 text-sm font-medium transition-colors duration-200 hover:text-green-500 ${
+                activeLink === link.path ? 'text-green-500' : 'text-gray-700'
               }`}
             >
               {link.name}
               {activeLink === link.path && (
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-500 rounded-full"></span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-green-500 rounded-full"></span>
               )}
             </a>
           ))}
@@ -71,7 +71,7 @@ function Navbar() {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="p-1.5 rounded-md bg-gray-50 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
+            className="p-1.5 rounded-md bg-gray-50 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500/40"
           >
             <svg
               className="w-6 h-6 text-gray-700"
@@ -101,7 +101,7 @@ function Navbar() {
         <div className="flex justify-end p-4 border-b border-gray-100">
           <button
             onClick={toggleMenu}
-            className="p-1.5 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/40 text-gray-700"
+            className="p-1.5 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500/40 text-gray-700"
           >
             <svg
               className="w-6 h-6"
@@ -128,7 +128,7 @@ function Navbar() {
               href={link.path} 
               className={`block px-3 py-2.5 rounded-md text-base font-medium transition-colors duration-200 ${
                 activeLink === link.path 
-                  ? 'bg-blue-50 text-blue-700' 
+                  ? 'bg-green-50 text-green-700' 
                   : 'text-gray-700 hover:bg-gray-50'
               }`}
             >
