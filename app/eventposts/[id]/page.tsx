@@ -191,14 +191,14 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
       };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+        <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
             <Navbar />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
                 {loading ? (
                     <div className="flex justify-center items-center py-32">
                         <div className="relative h-16 w-16">
-                            <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-blue-200"></div>
-                            <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-blue-600 border-t-transparent animate-spin"></div>
+                            <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-green-200"></div>
+                            <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-green-600 border-t-transparent animate-spin"></div>
                         </div>
                     </div>
                 ) : (
@@ -245,7 +245,7 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
                                         transition={{ duration: 0.4, delay: 0.6 }}
                                     >
                                         <Link href={link}>
-                                            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                                            <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                                                 Register Today
                                             </button>
                                         </Link>

@@ -225,14 +225,14 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+        <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
             <Navbar />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
                 {loading ? (
                     <div className="flex justify-center items-center py-32">
                         <div className="relative h-16 w-16">
-                            <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-blue-200"></div>
-                            <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-blue-600 border-t-transparent animate-spin"></div>
+                            <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-orange-200"></div>
+                            <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-orange-400 border-t-transparent animate-spin"></div>
                         </div>
                     </div>
                 ) : (
@@ -264,7 +264,7 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
                                 <div className="flex items-center mb-6">
                                     {blogData.author && (
                                         <div className="flex items-center">
-                                            <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
+                                            <div className="h-8 w-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-400 font-bold">
                                                 {blogData.author.charAt(0)}
                                             </div>
                                             <div className="ml-3">

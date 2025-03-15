@@ -71,7 +71,7 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
+        <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white relative overflow-hidden">
             <Navbar />
             
             {/* Decorative elements */}
@@ -99,7 +99,7 @@ const ContactForm: React.FC = () => {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            <h1 className="text-3xl md:text-4xl font-bold text-blue-800 mb-8">Share your thoughts with us</h1>
+                            <h1 className="text-3xl md:text-4xl font-bold text-orange-600 mb-8">Share your thoughts with us</h1>
                             
                             <div className="space-y-6">
                                 <motion.div 
@@ -108,7 +108,7 @@ const ContactForm: React.FC = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.4, delay: 0.3 }}
                                 >
-                                    <label htmlFor="name" className="text-sm font-medium text-blue-700 block mb-2">Name:</label>
+                                    <label htmlFor="name" className="text-sm font-medium text-orange-700 block mb-2">Name:</label>
                                     <input
                                         type="text"
                                         id="name"
@@ -116,7 +116,7 @@ const ContactForm: React.FC = () => {
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
-                                        className={`w-full px-4 py-3 border ${errors.name ? 'border-red-500' : 'border-blue-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
+                                        className={`w-full px-4 py-3 border ${errors.name ? 'border-red-500' : 'border-orange-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200`}
                                         placeholder="Your name"
                                     />
                                     {errors.name && <p className="mt-2 text-sm text-red-600">{errors.name}</p>}
@@ -128,7 +128,7 @@ const ContactForm: React.FC = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.4, delay: 0.4 }}
                                 >
-                                    <label htmlFor="email" className="text-sm font-medium text-blue-700 block mb-2">Email:</label>
+                                    <label htmlFor="email" className="text-sm font-medium text-orange-700 block mb-2">Email:</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -136,7 +136,7 @@ const ContactForm: React.FC = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className={`w-full px-4 py-3 border ${errors.email ? 'border-red-500' : 'border-blue-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
+                                        className={`w-full px-4 py-3 border ${errors.email ? 'border-red-500' : 'border-orange-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200`}
                                         placeholder="your.email@example.com"
                                     />
                                     {errors.email && <p className="mt-2 text-sm text-red-600">{errors.email}</p>}
@@ -148,7 +148,7 @@ const ContactForm: React.FC = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.4, delay: 0.5 }}
                                 >
-                                    <label htmlFor="mobile" className="text-sm font-medium text-blue-700 block mb-2">Mobile:</label>
+                                    <label htmlFor="mobile" className="text-sm font-medium text-orange-700 block mb-2">Mobile:</label>
                                     <input
                                         type="tel"
                                         id="mobile"
@@ -156,7 +156,7 @@ const ContactForm: React.FC = () => {
                                         value={formData.mobile}
                                         onChange={handleChange}
                                         required
-                                        className={`w-full px-4 py-3 border ${errors.mobile ? 'border-red-500' : 'border-blue-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
+                                        className={`w-full px-4 py-3 border ${errors.mobile ? 'border-red-500' : 'border-orange-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200`}
                                         placeholder="Your phone number"
                                     />
                                     {errors.mobile && <p className="mt-2 text-sm text-red-600">{errors.mobile}</p>}
@@ -168,14 +168,14 @@ const ContactForm: React.FC = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.4, delay: 0.6 }}
                                 >
-                                    <label htmlFor="message" className="text-sm font-medium text-blue-700 block mb-2">Message:</label>
+                                    <label htmlFor="message" className="text-sm font-medium text-orange-700 block mb-2">Message:</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         value={formData.message}
                                         onChange={handleChange}
                                         required
-                                        className={`w-full px-4 py-3 border ${errors.message ? 'border-red-500' : 'border-blue-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
+                                        className={`w-full px-4 py-3 border ${errors.message ? 'border-red-500' : 'border-orange-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200`}
                                         rows={6}
                                         placeholder="Type your message here..."
                                     />
@@ -190,7 +190,7 @@ const ContactForm: React.FC = () => {
                                     <button
                                         onClick={handleSubmit}
                                         disabled={loading}
-                                        className={`w-full ${loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'} text-white py-3 px-6 rounded-lg font-medium shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-[1.02]`}
+                                        className={`w-full ${loading ? 'bg-orange-400 cursor-not-allowed' : 'bg-orange-400 hover:bg-orange-700'} text-white py-3 px-6 rounded-lg font-medium shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-[1.02]`}
                                     >
                                         {loading ? (
                                             <div className="flex items-center justify-center">
@@ -204,8 +204,8 @@ const ContactForm: React.FC = () => {
                         </motion.div>
                     </div>
                     
-                    <div className="bg-blue-50 px-8 py-6 border-t border-blue-100">
-                        <div className="flex flex-col md:flex-row items-center justify-between text-sm text-blue-600">
+                    <div className="bg-orange-50 px-8 py-6 border-t border-orange-100">
+                        <div className="flex flex-col md:flex-row items-center justify-between text-sm text-orange-400">
                             <div className="mb-4 md:mb-0">We'll respond to your message as soon as possible</div>
                             <div className="flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

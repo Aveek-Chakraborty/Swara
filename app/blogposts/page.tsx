@@ -88,7 +88,7 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <motion.div 
@@ -98,7 +98,7 @@ const Page = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-blue-600">Blog</span>
+            Our <span className="text-orange-400">Blog</span>
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Insights, stories, and resources for parents and educators supporting students with diverse learning needs.
@@ -108,8 +108,8 @@ const Page = () => {
         {loading ? (
           <div className="flex justify-center items-center py-32">
             <div className="relative h-16 w-16">
-              <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-blue-200"></div>
-              <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-blue-600 border-t-transparent animate-spin"></div>
+              <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-orange-200"></div>
+              <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full border-4 border-orange-400 border-t-transparent animate-spin"></div>
             </div>
           </div>
         ) : blogData.length > 0 ? (
@@ -136,7 +136,7 @@ const Page = () => {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-3">
-                    <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
+                    <div className="h-8 w-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-400 font-bold">
                       {post.content.author.charAt(0)}
                     </div>
                     <div className="ml-3">
@@ -150,7 +150,7 @@ const Page = () => {
                   </p>
                   <a
                     href={`/blogposts/${post.uuid}`}
-                    className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 transition-colors"
+                    className="inline-flex items-center font-medium text-orange-400 hover:text-orange-600 transition-colors"
                   >
                     Read More
                     <svg className="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -168,7 +168,7 @@ const Page = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="bg-blue-50 rounded-xl shadow-lg p-10 max-w-2xl mx-auto">
+            <div className="bg-orange-50 rounded-xl shadow-lg p-10 max-w-2xl mx-auto">
               <div className="text-5xl mb-6">📚</div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Coming Soon!</h2>
               <p className="text-lg text-gray-600">
