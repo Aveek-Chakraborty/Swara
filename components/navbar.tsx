@@ -47,7 +47,7 @@ function Navbar() {
             <img
               src="/SwaraLogo.png"
               alt="Swara Logo"
-              className="transform transition-transform duration-500 hover:scale-105 p-2"
+              className="transform transition-transform duration-500 hover:scale-105 mt-3"
               width="80"
             />
           </a>
