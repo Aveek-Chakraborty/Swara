@@ -66,7 +66,7 @@ const WhyChooseUsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white-50 to-orange-50 ">
+    <section className="pt-24 bg-gradient-to-b from-white-50 to-orange-50 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"

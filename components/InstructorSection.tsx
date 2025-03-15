@@ -38,7 +38,7 @@ const InstructorsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-green-50 to-white">
+    <section className="pt-24 md:pb-10 bg-gradient-to-b from-green-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
@@ -103,7 +103,7 @@ const InstructorsSection = () => {
           ))}
         </div>
         
-        <motion.div
+        {/* <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -111,7 +111,7 @@ const InstructorsSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
