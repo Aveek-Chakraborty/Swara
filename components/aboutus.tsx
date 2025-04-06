@@ -63,7 +63,7 @@ export default function AboutSWARAEnhanced() {
         <div className="absolute top-0 left-0 w-32 h-32 border-t-4 border-l-4 border-orange-200 opacity-30"></div>
         <div className="absolute bottom-0 right-0 w-32 h-32 border-b-4 border-r-4 border-green-200 opacity-30"></div>
         
-        <div className={`text-center max-w-4xl px-6 pt-40 md:pt-0 transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+        <div className={`text-center max-w-4xl px-6 pt-28 md:pt-0 transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           <h1 className="text-5xl font-light text-orange-600 sm:pt-20 mb-6">About <span className="font-bold">SWARA</span></h1>
           <div className="h-px w-40 bg-gradient-to-r from-orange-300 to-green-300 mx-auto mb-8"></div>
           <p className="text-xl text-gray-700 leading-relaxed mb-6">
