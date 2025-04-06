@@ -2,7 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { CalendarCheckIcon, HomeIcon, MailIcon, PenIcon, VideoIcon } from 'lucide-react'
+import { CalendarCheckIcon, HomeIcon, MailIcon, PenIcon, Settings, VideoIcon } from 'lucide-react'
 
 const SideNavigation = () => {
   const pathname = usePathname()
@@ -86,6 +86,20 @@ const SideNavigation = () => {
               <div className='flex items-center gap-3'>
                 <MailIcon className={isActive('/admin/messages') ? 'text-indigo-600 dark:text-indigo-400' : ''}/> 
                 Messages
+              </div>
+            </Link>
+
+            <Link 
+              href='/admin/services' 
+              className={`block hover:shadow-slate-600 dark:hover:shadow-slate-400 hover:shadow-md 
+                ${isActive('/admin/services') 
+                  ? 'dark:bg-indigo-700 bg-indigo-200 border-l-4 border-indigo-600' 
+                  : 'dark:bg-zinc-700 bg-zinc-300'} 
+                p-3 rounded-md text-xs md:text-lg transition-all duration-200`}
+            >
+              <div className='flex items-center gap-3'>
+                <Settings className={isActive('/admin/services') ? 'text-indigo-600 dark:text-indigo-400' : ''}/> 
+                Services
               </div>
             </Link>
           </li>

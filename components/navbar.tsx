@@ -34,7 +34,7 @@ function Navbar() {
     { name: "Blogs", path: "/blogposts" },
     { name: "Events", path: "/eventposts" },
     { name: "Videos", path: "/videoposts" },
-    { name: "Services", path: "#" },
+    { name: "Services", path: "/serviceposts" },
     { name: "Contact us", path: "/contact" }
   ];
 

@@ -15,6 +15,12 @@ export const Events = pgTable("events",{
   link: varchar('link')
 });
 
+export const Services = pgTable("serices",{
+  uuid:varchar('uid').primaryKey(),
+  content:varchar('content'),
+  link: varchar('link')
+});
+
 export const Messages = pgTable("messages",{
   uuid:varchar('uid').primaryKey(),
   name:varchar('name'),
