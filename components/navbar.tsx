@@ -35,7 +35,8 @@ function Navbar() {
     { name: "Events", path: "/eventposts" },
     { name: "Videos", path: "/videoposts" },
     { name: "Services", path: "/serviceposts" },
-    { name: "Contact us", path: "/contact" }
+    { name: "Contact us", path: "/contact" },
+    { name: "About us", path: "/about" },
   ];
 
   return (

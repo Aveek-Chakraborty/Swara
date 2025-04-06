@@ -17,28 +17,28 @@ const FAQSection: React.FC = () => {
   const faqs: FAQ[] = [
     {
       id: 1,
-      question: "How does your school accommodate students with ADHD?",
-      answer: "Our classrooms feature flexible seating arrangements, movement breaks, and multisensory learning approaches. Teachers receive specialized training in ADHD-friendly instructional methods, and we offer executive functioning coaching and organizational support."
+      question: "Do you offer one-on-one mentoring or customized learning plans?",
+      answer: "Yes, we offer personalized mentoring and customized learning plans tailored to individual needs and goals."
     },
     {
       id: 2,
-      question: "What is the student-to-teacher ratio?",
-      answer: "We maintain a low student-to-teacher ratio of 12:1, with additional support staff available. This ensures each student receives individualized attention and support tailored to their specific learning needs."
+      question: "Are your sessions online, offline, or both?",
+      answer: "We offer both online and offline sessions, depending on the service. Please refer to our services section for more details. "
     },
     {
       id: 3,
-      question: "Do you offer after-school programs?",
-      answer: "Yes, we provide structured after-school activities including homework support, creative arts, sports, and special interest clubs designed to accommodate diverse learning styles and needs."
+      question: "Do you offer trial sessions or discovery workshops before committing to a program?",
+      answer: "Yes, we offer trial sessions and discovery workshops. Contact us for more information and to schedule a session."
     },
     {
       id: 4,
-      question: "How do you handle behavioral challenges?",
-      answer: "We use a positive behavioral support framework focused on understanding triggers and teaching self-regulation skills. Our approach emphasizes collaboration between students, teachers, and families to develop effective strategies."
+      question: "Does SWARA offer support for neurodivergent learners or those with learning difficulties?",
+      answer: " Yes, we provide support for neurodivergent learners and those with learning difficulties, ensuring an inclusive and understanding learning environment."
     },
     {
       id: 5,
-      question: "What specialized training do your teachers receive?",
-      answer: "All our educators complete comprehensive training in inclusive education practices, neurodiversity, differentiated instruction, and specific learning accommodations. They participate in ongoing professional development to stay current with best practices."
+      question: "How do I stay updated on upcoming programs, workshops, or events at SWARA?",
+      answer: "To stay updated on our upcoming programs, workshops, and events, follow us on our social media platforms for the latest information and announcements."
     }
   ];
 
