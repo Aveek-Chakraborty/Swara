@@ -23,7 +23,7 @@ const MessagesComponent: React.FC = () => {
       try {
         const response = await fetch('/api/messages');
         const data = await response.json();
-        setMessages(data.message);
+        if(data.message != "External server error"){setMessages(data.message);}
       } catch (error) {
         console.error('Error fetching messages:', error);
       } finally {
@@ -83,7 +83,15 @@ const MessagesComponent: React.FC = () => {
         <h1 className="text-2xl p-5 font-semibold">Manage all your messages here</h1>
       </div>
       <div className="flex flex-col gap-4 p-4">
-        {messages.map((message) => (
+        {messages.length === 0 ? (
+          <div className="flex flex-col items-center justify-center text-gray-500 py-16">
+            <svg className="w-16 h-16 mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-6h6v6m-6 4h6a2 2 0 002-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p className="text-lg font-medium">No messages yet</p>
+            <p className="text-sm">Messages you receive will show up here.</p>
+          </div>
+        ) : messages.map((message) => (
           <div
             key={message.uuid}
             className="w-full bg-white border border-gray-200 rounded-lg shadow-lg p-4 hover:shadow-xl transition-transform transform hover:-translate-y-1"

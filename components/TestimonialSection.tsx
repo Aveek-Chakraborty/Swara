@@ -3,10 +3,6 @@ import { motion } from 'framer-motion';
 
 const TestimonialsSection = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-
- 
-
-  
   const testimonials = [
     {
       name: "Sarah Johnson",
